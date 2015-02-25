@@ -2,3 +2,5 @@
 
 [![Travis-CI Build Status](https://travis-ci.org/cboettig/regimeshifts.png?branch=master)](https://travis-ci.org/cboettig/regimeshifts)
 
+- Work in progress
+
