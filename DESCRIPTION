@@ -1,0 +1,13 @@
+Package: regimeshifts
+Title: Models and Data for Ecological Regime Shifts
+Version: 0.0.0.9000
+Authors@R: person("Carl", "Boettiger", , "cboettig@ropensci.org", role = c("aut", "cre"))
+Description: Models and Data for Ecological Regime Shifts, with an emphasis for testing 
+             methods to detect early warning signs of regime shifts.
+Depends: 
+  R (>= 3.1.2)
+Suggests:
+  testthat,
+  rmarkdown
+License: MIT + file LICENSE
+LazyData: true
