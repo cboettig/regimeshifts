@@ -1,0 +1,31 @@
+
+```{r}
+library(ggplot2)
+```
+
+Here's the J model: 
+
+
+```{r}
+p1 <- 1
+p2 <- 100
+p3 <- 1
+p4 <- 10
+f <- function(x) - p1 * x ^ 2 -  p2 / (p3 + x)  + p4 * x 
+```
+
+Hello multiple stable states: 
+
+```{r}
+x = seq(1,10, .01)
+df <- data.frame(x, f= f(x))
+ggplot(df, aes(x,f)) + geom_line() + geom_hline(yintercept = 0)
+```
+
+Bye Bye stable state, hello collpase
+
+```{r}
+p4 <- 8
+df <- data.frame(x, f= f(x))
+ggplot(df, aes(x,f)) + geom_line() + geom_hline(yintercept = 0)
+```
