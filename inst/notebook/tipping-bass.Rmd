@@ -1,4 +1,18 @@
 
+<https://doi.org/10.1111/j.1461-0248.2007.01131.x>
+
+
+
+
+$$\dot A = -p_1 A + p_2 J$$
+$$\dot F = p_3 (1 - p_4 F) - p_5 F A$$
+$$\dot J = p_6 - J A - p_7 F J / (p_8 + F) + p_9 A$$
+
+So:
+
+$$\dot J  =   - q_1 J^2 - q_2 / (1 + J ) + q_3 J$$
+
+
 ```{r}
 library(ggplot2)
 ```
