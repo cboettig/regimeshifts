@@ -39,7 +39,6 @@
 #' plot(seq_along(y), y)
 #' 
 #' @export
-#' 
 dai <- function(n_t, 
               t = 23, # Hours between serial dilutions
               epsilon = rnorm(1, 0, 0.15), 
