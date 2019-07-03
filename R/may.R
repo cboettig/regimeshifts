@@ -3,7 +3,7 @@
 # stochastic oscillator which calculates mean growth based on a deterministic growth model
 # implements mean (mu) in a random draw from norm distribution 
 # returns a population density at next time step
-#
+##
 may <- function(r = .5, #growth rate
                 x0 = 1, #initial x value
                 K = 2, 
