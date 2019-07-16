@@ -5,32 +5,24 @@
 # returns a population density at next time step
 ##
 may <- function(r = .5,         #growth rate
-                x0 = 1,         #initial x value
+                x_t   ,         #x value at time t
                 K = 2, 
                 Q = 5, 
                 H = .38, 
                 sigma = .04,    #standard deviation
-                a = 0.245, 
-                N = 1e4,
-                t=1)              #specific time step
+                a = 0.245)
 {
-  #sets x, y, and mu as same length N
-  x <- numeric(N)  
-  y <- numeric(N)
-  mu <- numeric(N)
-  x[1] <- x0
-  
   # Determinstic mean looks like standard R
-  mu[t] <- x[t] + x[t] * r * (1 - x[t] / K)  - a * x[t] ^ Q / (x[t] ^ Q + H ^ Q)
+  mu_t <- x_t + x_t * r * (1 - x_t / K)  - a * x_t ^ Q / (x_t ^ Q + H ^ Q)
   
   # stochastic implementation, now in base R
   #draws single value from distribution with mean mu and sd param sigma
-  y[t+1] <- rnorm(1, mu[t], sd = sigma) 
+  y_t1 <- rnorm(1, mu_t, sd = sigma) 
   
   #x value for n+1 time step
-  x[t+1] <- max(y[t+1],0)
+  x_t1 <- max(y_t1,0)
   
   #return x at new individual time step
-  x 
+  x_t1
 }
 
