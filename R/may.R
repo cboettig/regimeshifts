@@ -1,15 +1,23 @@
-# may
-#
-# stochastic oscillator which calculates mean growth based on a deterministic growth model
-# implements mean (mu) in a random draw from norm distribution 
-# returns a population density at next time step
-##
-may <- function(r = .5,         #growth rate
-                x_t   ,         #x value at time t
+#' may
+#'stochastic oscillator which calculates mean growth based on a deterministic growth model
+#'implements mean (mu) in a random draw from norm distribution 
+#' returns a population density at next time step
+#' @param r population growth rate
+#' @param x_t pop value at time t
+#' @param K carrying capacity
+#' @param Q
+#' @param H
+#' @param sigma standard deviation
+#' @param a
+#' @return population at next (single) timestep
+#' may model:
+
+may <- function(r = .5,         
+                x_t   ,         
                 K = 2, 
                 Q = 5, 
                 H = .38, 
-                sigma = .04,    #standard deviation
+                sigma = .04,    
                 a = 0.245)
 {
   # Determinstic mean looks like standard R
